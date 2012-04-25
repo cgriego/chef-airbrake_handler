@@ -1,7 +1,14 @@
 Description
 ===========
 
-Report [Chef](http://www.opscode.com/chef) exceptions to [Airbrake](http://airbrake.io) using the [airbrake_handler gem](https://github.com/morgoth/airbrake_handler).
+Report [Chef][1] exceptions to [Airbrake][2] using the [airbrake_handler gem][3].
+
+This cookbook uses the `chef_gem` resource added in Chef 0.10.10. If you are using an earlier version of Chef, then you can install the [chef_gem cookbook][4] which backports this functionality.
+
+[1]: http://www.opscode.com/chef
+[2]: http://airbrake.io
+[3]: https://github.com/morgoth/airbrake_handler
+[4]: http://community.opscode.com/cookbooks/chef_gem
 
 Attributes
 ==========

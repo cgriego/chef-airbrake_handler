@@ -26,17 +26,8 @@
 
 include_recipe "chef_handler"
 
-if defined?(Chef::Resources::ChefGem)
-  chef_gem "airbrake_handler" do
-    version node["airbrake_handler"]["version"]
-  end
-else
-  gem_package "airbrake_handler" do
-    action :nothing
-    version node["airbrake_handler"]["version"]
-  end.run_action(:install)
-
-  Gem.clear_paths
+chef_gem "airbrake_handler" do
+  version node["airbrake_handler"]["version"]
 end
 
 gem "airbrake_handler"
