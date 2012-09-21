@@ -26,6 +26,8 @@
 
 include_recipe "chef_handler"
 
+Gem.clear_paths # workaround for CHEF-3164
+
 chef_gem "airbrake_handler" do
   version node["airbrake_handler"]["version"]
 end
