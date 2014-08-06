@@ -1,3 +1,4 @@
+name             "airbrake_handler"
 maintainer       "Chris Griego"
 maintainer_email "cgriego@gmail.com"
 license          "MIT"
