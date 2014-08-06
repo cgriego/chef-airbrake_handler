@@ -30,6 +30,12 @@ Gem.clear_paths # workaround for CHEF-3164
 
 chef_gem "airbrake_handler" do
   version node["airbrake_handler"]["version"]
+  options "--conservative --ignore-dependencies"
+end
+
+chef_gem "toadhopper" do
+  version node["toadhopper"]["version"]
+  options "--conservative --ignore-dependencies"
 end
 
 gem "airbrake_handler"
